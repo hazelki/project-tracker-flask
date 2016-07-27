@@ -6,12 +6,15 @@
 <body>
 <h1>{{ first }} {{ last }}</h1>
 
-<p> Github Account: {{ github }}</p>
+<p>Github Account: {{ github }}</p>
 
 <ul>
     {% for project, grade in project_results %}
-    <li> {{ project }} : {{ grade }}</li>
+    <li> <a href="http://127.0.0.1:5000/project?title={{ project }}">{{ project }}</a> : {{ grade }}</li>
     {% endfor %}
 </ul>
+
 </body>
 </html>
+
+
